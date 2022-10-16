@@ -10,7 +10,7 @@ echo "==========================================="
 # install depend
 echo "=========== Install Depend ================="
 
-apt install build-essential vim git wget htop curl python3.6 python3.6-dev python3.6-venv python3-pip -y
+apt install build-essential vim git wget htop curl python8.10 python3.8.10-dev python3.8.10-venv python3-pip -y
 pip3 install pip --upgrade
 
 
@@ -21,13 +21,13 @@ echo "==========================================="
 echo "=========== reBuild Squid ================="
 
 cd /opt
-wget -c http://www.squid-cache.org/Versions/v4/squid-4.4.tar.gz
-tar -zxvf squid-4.4.tar.gz
-cd squid-4.4
+wget -c http://www.squid-cache.org/Versions/v3/3.5/squid-3.5.27.tar.gz
+tar -zxvf squid-3.5.27.tar.gz
+cd squid-3.5.27
 ./configure 'CXXFLAGS=-DMAXTCPLISTENPORTS=65000' --enable-ltdl-convenience
 make && make install
 chmod 777 /usr/local/squid/var/logs/
-mkdir /var/spool/squid4
+mkdir /var/spool/squid3
 mkdir /etc/squid
 
 echo "==========================================="
@@ -35,10 +35,10 @@ echo "==========================================="
 
 echo "=========== Install Python requirements ================="
 cd /opt/
-git clone https://github.com/italy89/v6proxies.git v6proxies
+git clone https://github.com/nguyenanhung/v6proxies.git v6proxies
 cd /opt/v6proxies
-pip install --upgrade pip setuptools
-pip install -r requirements.txt
+pip3.8.10 install --upgrade pip setuptools
+pip3.8.10 install -r requirements.txt
 
 # Increase The Maximum Number Of Open Files
 
