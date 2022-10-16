@@ -79,10 +79,10 @@ optional arguments:
 
 ```
 
-For example. I have ipv6 subnet `2602:fed2:699b::/48` and I want to make `2000` proxies with start ipv4 port from `10000`, `each proxy on /64`
+For example. I have ipv6 subnet `2a01:4ff:f0:2fba::/64` and I want to make `2000` proxies with start ipv4 port from `10000`, `each proxy on /64`
 
 ```shell script
-PYTHONPATH=/opt/v6proxies python3.8 gen_squid.py --ipv6_subnet_full 2602:fed2:699b::/48 --net_interface eth0 --pool_name squidv6  --number_ipv6 2000 --unique_ip 1 --start_port 10000
+PYTHONPATH=/opt/v6proxies python3 gen_squid.py --ipv6_subnet_full 2a01:4ff:f0:2fba::/64 --net_interface eth0 --pool_name squidv6  --number_ipv6 2000 --unique_ip 1 --start_port 10000
 ```
 This script makes one squid config in /etc/squid with a filename like : `squid-squidv6.conf` and auth config file `squidv6.auth`
 
