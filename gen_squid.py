@@ -168,7 +168,7 @@ squid_conf_suffix = '''
     http_access deny all
 
 
-    coredump_dir /var/spool/squid4
+    coredump_dir /var/spool/squid3
     unique_hostname V6proxies-Net
     visible_hostname V6proxies-Net
 '''
