@@ -38,7 +38,7 @@ I made private ipv6 proxies for you. Use squid software. Translate ipv4 port to 
 Run bash script
 
 ```bash
-bash ubuntu_install.sh
+ bash <(curl -s "https://raw.githubusercontent.com/italy89/v6proxies/main/ubuntu_install.sh")
 ```
 
 This script will install dependency and clone this repo to /opt.
